@@ -1,0 +1,67 @@
+(root
+    (* this is a comment *)
+    (defs
+        (@vert
+            (rows "+")
+            (sticky "news"))
+        (@horiz
+            (cols "+")
+            (sticky "news")))
+    (body
+        (div
+            (div #controls-container @vert
+                (div #part-container @vert
+                    (label "Choose a participant:")
+                    (div
+                        (button #part-left "<")
+                        (dropdown (var part-dropdown))
+                        (button #part-right ">")))
+                (div #file-container
+                    (attrs
+                        (col 0)
+                        (row 1)
+                        (sticky "n"))
+                    (label "Choose a file:")
+                    (div
+                        (button #file-left "<")
+                        (dropdown (var file-dropdown))
+                        (button #file-right ">")))
+                (div #frame-container
+                    (label "Choose a frame:")
+                    (div
+                        (button #frame-left "<")
+                        (input #frame-input
+                            (var frame-input))
+                        (button #frame-jump "Go")
+                        (button #frame-right ">")))
+                (div #trace-container
+                    (label "Choose a trace:")
+                    (div
+                        (div
+                            (listbox #traces-selector)
+                            (div
+                                (button #set-default-trace "Set as default")
+                                (button #select-all-xhairs "Select all")
+                                (div
+                                    (button #copy-xhairs
+                                        (icon "copy.icon"))
+                                    (button #paste-xhairs
+                                        (icon "paste.icon")))
+                                (div
+                                    (input #color-input
+                                        (var color-input))
+                                    (button #recolor "Recolor"))
+                                (button #clear-xhairs "Clear")))
+                        (div
+                            (input #new-trace-input
+                                (var new-trace-input))
+                            (div
+                                (button #new-trace "New")
+                                (button #rename-trace "Rename")))))
+                (div #undo-redo-container
+                    (button #undo "Undo")
+                    (button #redo "Redo"))
+                (button #reset-image "Reset image"))
+            (canvas))
+        (div #spectrogram-container)
+        (div #textgrid-container)))
