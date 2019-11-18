@@ -4,21 +4,12 @@ tokens = (
     'STRLITERAL',
     'LPAREN',
     'RPAREN',
-    'VAR',
-    'ROOT',
-    'DEFS',
-    'BODY',
-    'ID',
-    'INCLUDE',
-    'DIV',
-    'ICON',
-    'LABEL',
-    'BUTTON',
-    'DROPDOWN',
-    'INPUT',
-    'LISTBOX',
-    'CANVAS',
-    'IDENTIFIER')
+    'VARIDENTIFIER',
+    'IDIDENTIFIER',
+    'INCLUDEIDENTIFIER',
+    'WIDGETIDENTIFIER',
+    'BAREIDENTIFIER')
+
 
 def t_COMMENT(t):
     r'\(\*.*?\*\)'
@@ -42,64 +33,27 @@ def t_RPAREN(t):
     r'\)'
     return t
 
-def t_VAR(t):
-    'var'
+def t_VARIDENTIFIER(t):
+    r'\$[a-zA-Z][\w-]*'
+    t.value = t.value[1:]
     return t
 
-def t_ROOT(t):
-    'root'
+def t_IDIDENTIFIER(t):
+    r'\#[a-zA-Z][\w-]*'
+    t.value = t.value[1:]
     return t
 
-def t_DEFS(t):
-    'defs'
+def t_INCLUDEIDENTIFIER(t):
+    r'\@[a-zA-Z][\w-]*'
+    t.value = t.value[1:]
     return t
 
-def t_BODY(t):
-    'body'
+def t_WIDGETIDENTIFIER(t):
+    r'[A-Z][\w-]*'
     return t
 
-def t_ID(t):
-    r'\#'
-    return t
-
-def t_INCLUDE(t):
-    r'\@'
-    return t
-
-def t_DIV(t):
-    'div'
-    return t
-
-def t_ICON(t):
-    'icon'
-    return t
-
-def t_LABEL(t):
-    'label'
-    return t
-
-def t_BUTTON(t):
-    'button'
-    return t
-
-def t_DROPDOWN(t):
-    'dropdown'
-    return t
-
-def t_INPUT(t):
-    'input'
-    return t
-
-def t_LISTBOX(t):
-    'listbox'
-    return t
-
-def t_CANVAS(t):
-    'canvas'
-    return t
-
-def t_IDENTIFIER(t):
-    r'[a-zA-Z][\w-]*'
+def t_BAREIDENTIFIER(t):
+    r'[a-z][\w-]*'
     return t
 
 t_ignore    = ' \t\n'
