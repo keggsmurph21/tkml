@@ -1,6 +1,10 @@
 import ply.yacc as yacc
 from .tokens import tokens
 
+class ParseError(Exception):
+    def __init__(self, t):
+        super().__init__(f'Unable to parse {t.type} token "{t.value}" at position {t.lexpos}')
+
 class Node:
     def __init__(self, *children):
         self.children = children
@@ -11,103 +15,136 @@ class Node:
         return len(self.children)
     def __repr__(self):
         string = f'({type(self).__name__}'
-        if hasattr(self, 'name'):
-            if self.name is not None:
-                string += ' ' + repr(self.name)
+        if isinstance(self, ValueNode):
+            string += ' ' + repr(self.value)
         if len(self):
             string += ' '
             string += ' '.join(map(repr, self))
         string += ')'
         return string
+    def pretty_print(self, indent=0):
+        print(f'{" "*(indent*4)}({type(self).__name__}', end='')
+        if isinstance(self, ValueNode):
+            print(' ', end='')
+            print(repr(self.value), end='')
+        for child in self:
+            print()
+            child.pretty_print(indent + 1)
+        print(')', end='')
 
-def p_root(p):
+class RootNode(Node): pass
+
+class ValueNode(Node):
+    def __init__(self, value):
+        super().__init__()
+        self.value = value
+
+class BareNode(ValueNode): pass
+class IncludeNode(ValueNode): pass
+class IncludeDefNode(ValueNode): pass
+class IdNode(ValueNode): pass
+class VarNode(ValueNode): pass
+class WidgetNode(ValueNode): pass
+class StrLiteral(ValueNode):
+    def __repr__(self):
+        return f'"{self.value}"'
+class IntLiteral(ValueNode):
+    def __repr__(self):
+        return f'{self.value}'
+
+
+def p_start(p):
     '''
-    root        : LPAREN abstractnodes RPAREN
+    start       : list
+    '''
+    p[0] = RootNode(*p[1])
+
+def p_list(p):
+    '''
+    list        : LPAREN items RPAREN
     '''
     p[0] = Node(*p[2])
 
-def p_abstractnodes(p):
+def p_items_recursive(p):
     '''
-    abstractnodes   : abstractnode abstractnodes
-                    | empty
+    items       : item items
     '''
-    if len(p) == 3:
-        p[0] = Node(p[1], *p[2])
-    else:
-        p[0] = []
+    p[0] = Node(p[1], *p[2])
 
-def p_abstractnode(p):
+def p_items_empty(p):
     '''
-    abstractnode    : include
-                    | widget
+    items       : empty
+    '''
+    p[0] = []
+
+def p_item_list(p):
+    '''
+    item        : list
     '''
     p[0] = p[1]
 
-def p_includes(p):
+def p_item_def_include(p):
     '''
-    includes    : include includes
-                | empty
+    item        : DEF INCLUDEIDENTIFIER
     '''
-    if len(p) == 3:
-        p[0] = Node(p[1], *p[2])
-    else:
-        p[0] = []
+    p[0] = IncludeDefNode(p[2])
 
-def p_include(p):
+def p_item_bare_bare_str(p):
     '''
-    include      : LPAREN INCLUDEIDENTIFIER includeargs RPAREN
+    item        : BAREIDENTIFIER BAREIDENTIFIER STRLITERAL
     '''
-    p[0] = Node(p[2], *p[3])
+    p[0] = Node(BareNode(p[1]), BareNode(p[2]), StrLiteral(p[3]))
 
-def p_includeargs(p):
+def p_item_bare_bare_int(p):
     '''
-    includeargs : includearg includeargs
-                | empty
+    item        : BAREIDENTIFIER BAREIDENTIFIER INTLITERAL
     '''
-    if len(p) == 3:
-        p[0] = Node(p[1], *p[2])
-    else:
-        p[0] = []
+    p[0] = Node(BareNode(p[1]), BareNode(p[2]), IntLiteral(p[3]))
 
-def p_includearg(p):
+def p_item_widget(p):
     '''
-    includearg  : LPAREN BAREIDENTIFIER BAREIDENTIFIER STRLITERAL RPAREN
-                | LPAREN BAREIDENTIFIER BAREIDENTIFIER INTLITERAL RPAREN
+    item        : WIDGETIDENTIFIER
     '''
-    p[0] = Node(p[2], p[3], p[4])
+    p[0] = WidgetNode(p[1])
 
-def p_widgets(p):
+def p_item_include(p):
     '''
-    widgets     : widget widgets
-                | empty
+    item        : INCLUDEIDENTIFIER
     '''
-    if len(p) == 3:
-        p[0] = Node(p[1], *p[2])
-    else:
-        p[0] = []
+    p[0] = IncludeNode(p[1])
 
-def p_widget(p):
+def p_item_id(p):
     '''
-    widget      : LPAREN WIDGETIDENTIFIER widgetargs RPAREN
+    item        : IDIDENTIFIER
     '''
-    print(p)
-    p[0] = Node(p[2], *p[3])
+    p[0] = IdNode(p[1])
 
-def p_widgetargs(p):
+def p_item_var(p):
     '''
-    widgetargs  : empty
+    item        : VARIDENTIFIER
     '''
-    if len(p) == 3:
-        p[0] = Node(p[1], *p[2])
-    else:
-        p[0] = []
+    p[0] = VarNode(p[1])
+
+def p_item_str(p):
+    '''
+    item        : STRLITERAL
+    '''
+    p[0] = StrLiteral(p[1])
+
+def p_item_int(p):
+    '''
+    item        : INTLITERAL
+    '''
+    p[0] = IntLiteral(p[1])
 
 def p_empty(p):
     '''
     empty       :
     '''
 
-def p_error(p):
-    raise ValueError(f'Parse error in input: {p}')
+def p_error(t):
+    if t is None:
+        raise EOFError
+    raise ParseError(t)
 
 parser = yacc.yacc()

@@ -1,9 +1,9 @@
 (
     (* this is a comment *)
-    (@vert
+    (:def @vert
         (grid-kwarg rows "+")
         (grid-kwarg sticky "news"))
-    (@horiz
+    (:def @horiz
         (grid-kwarg cols "+")
         (grid-kwarg sticky "news"))
     (
@@ -57,4 +57,4 @@
                 (Button #reset-image "Reset image"))
             (Canvas))
         (#spectrogram-container)
-        (#textgrid-container)))
+        (#textgrid-container))))

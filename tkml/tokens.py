@@ -4,6 +4,8 @@ tokens = (
     'STRLITERAL',
     'LPAREN',
     'RPAREN',
+    'DEF',
+    'SET',
     'VARIDENTIFIER',
     'IDIDENTIFIER',
     'INCLUDEIDENTIFIER',
@@ -31,6 +33,16 @@ def t_LPAREN(t):
 
 def t_RPAREN(t):
     r'\)'
+    return t
+
+def t_DEF(t):
+    r':def'
+    t.value = 'def'
+    return t
+
+def t_SET(t):
+    r':set'
+    t.value = 'set'
     return t
 
 def t_VARIDENTIFIER(t):
