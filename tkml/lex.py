@@ -1,5 +1,6 @@
 from ply.lex import lex as ply_lex
 from . import tokens
+from .tokens import LexError
 
 lexer = ply_lex(module=tokens)
 

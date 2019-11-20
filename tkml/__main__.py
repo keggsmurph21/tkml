@@ -1,5 +1,5 @@
-from .lex import lex
-from .parse import parser
+from .lex import lex, LexError
+from .parse import parser, ParseError
 
 while True:
     try:
@@ -8,4 +8,7 @@ while True:
         break
     if not chars:
         continue
-    print(parser.parse(chars))
+    try:
+        print(parser.parse(chars))
+    except (LexError, ParseError) as e:
+        print(e)
