@@ -3,7 +3,7 @@ from .tokens import tokens
 
 class ParseError(Exception):
     def __init__(self, t):
-        super().__init__(f'Unable to parse {t.type} token "{t.value}" at position {t.lexpos}')
+        super().__init__(f'Unexpected {t.type} ("{t.value}") at position {t.lexpos}')
 
 class ParseNode:
     def __init__(self, *children):
