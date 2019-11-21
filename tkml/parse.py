@@ -5,7 +5,7 @@ class ParseError(Exception):
     def __init__(self, t):
         super().__init__(f'Unable to parse {t.type} token "{t.value}" at position {t.lexpos}')
 
-class Node:
+class ParseNode:
     def __init__(self, *children):
         self.children = children
     def __iter__(self):
@@ -32,9 +32,9 @@ class Node:
             child.pretty_print(indent + 1)
         print(')', end='')
 
-class RootNode(Node): pass
+class RootNode(ParseNode): pass
 
-class ValueNode(Node):
+class ValueNode(ParseNode):
     def __init__(self, value):
         super().__init__()
         self.value = value
@@ -63,13 +63,13 @@ def p_list(p):
     '''
     list        : LPAREN items RPAREN
     '''
-    p[0] = Node(*p[2])
+    p[0] = ParseNode(*p[2])
 
 def p_items_recursive(p):
     '''
     items       : item items
     '''
-    p[0] = Node(p[1], *p[2])
+    p[0] = ParseNode(p[1], *p[2])
 
 def p_items_empty(p):
     '''
@@ -93,13 +93,13 @@ def p_item_bare_bare_str(p):
     '''
     item        : BAREIDENTIFIER BAREIDENTIFIER STRLITERAL
     '''
-    p[0] = Node(BareNode(p[1]), BareNode(p[2]), StrLiteral(p[3]))
+    p[0] = ParseNode(BareNode(p[1]), BareNode(p[2]), StrLiteral(p[3]))
 
 def p_item_bare_bare_int(p):
     '''
     item        : BAREIDENTIFIER BAREIDENTIFIER INTLITERAL
     '''
-    p[0] = Node(BareNode(p[1]), BareNode(p[2]), IntLiteral(p[3]))
+    p[0] = ParseNode(BareNode(p[1]), BareNode(p[2]), IntLiteral(p[3]))
 
 def p_item_widget(p):
     '''
