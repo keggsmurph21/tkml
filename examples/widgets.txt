@@ -1,0 +1,103 @@
+Button
+Canvas
+CanvasTooltip
+Crosshairs
+Entry
+Frame
+Header
+Label
+Listbox
+RectTracker
+Scrollbar
+Spinbox
+Tk
+Toplevel
+ZoomFrame
+filedialog
+
+Button(sbframe, text='Offset', command=self.shiftFrames, takefocus=0)
+Button(self.app.LEFT, text='Reset image', command=self.zoomReset, takefocus=0)#, pady=7 )
+Button(self.filesFrame, text='<', command=self.filesPrev, takefocus=0)
+Button(self.filesFrame, text='>', command=self.filesNext, takefocus=0)
+Button(self.frame, image=self.img_copy, command=self.copy, takefocus=0), row=12, column=2 ), # FIXME: add tooltip for "Copy"
+Button(self.frame, image=self.img_paste, command=self.paste, takefocus=0), row=12, column=3 ), # FIXME: add tooltip for "Paste"
+Button(self.frame, text="Play/Pause", command=self.playpauseAV, state=DISABLED, takefocus=0) # NOTE: not currently appearing
+Button(self.frame, text='Clear', command=self.clear, takefocus=0), row=15, column=2, columnspan=2 ),
+Button(self.frame, text='Load frames', command=self.load, takefocus=0)
+Button(self.frame, text='New', command=self.newTrace, takefocus=0), row=100, column=2 ),
+Button(self.frame, text='Recolor', command=self.recolor, takefocus=0), row=13, column=3 ),
+Button(self.frame, text='Redo', command=self.redo, takefocus=0)
+Button(self.frame, text='Rename', command=self.renameTrace, takefocus=0), row=100, column=3 ) ]
+Button(self.frame, text='Select all', command=self.selectAll, takefocus=0), row=11, column=2, columnspan=2 ),
+Button(self.frame, text='Set as default', command=self.setDefaultTraceName, takefocus=0), row=10, column=2, columnspan=2 ),
+Button(self.frame, text='Undo', command=self.undo, takefocus=0)
+Button(self.framesSubframe, text='<', command=self.framesPrev, takefocus=0)
+Button(self.framesSubframe, text='>', command=self.framesNext, takefocus=0)
+Button(self.framesSubframe, text='Go', command=self.framesJumpTo, takefocus=0)
+Button(self.spinwin, text='Apply', command=self.drawSpectrogram, takefocus=0)
+Button(self.spinwin, text='Standards', command=self.restoreDefaults, takefocus=0)
+Button(self.window, text='Search', command=self.search, takefocus=0)
+Canvas( master,  bg='grey', width=self.canvas_width, height=self.canvas_height, highlightthickness=0 )
+Canvas()
+Canvas(master)
+Canvas(self):
+Canvas(self.canvas_frame, width=self.canvas_width, height=self.canvas_height, background='gray', highlightthickness=0)
+Canvas(self.canvas_frame, width=self.canvas_width, height=self.canvas_height, background='gray', highlightthickness=0)}
+Canvas(self.canvas_frame, width=self.canvas_width, height=self.canvas_height/3, highlightthickness=0)
+Canvas(self.frame, width=self.canvas_width, height=self.canvas_height, background='gray', highlightthickness=0)
+Canvas(self.frame, width=self.label_width, height=self.canvas_height, highlightthickness=0),
+Canvas(self.frame, width=self.label_width, height=self.canvas_height, highlightthickness=0, background='gray')
+CanvasTooltip(frames, frame,text=tier[i].mark)
+Crosshairs( self.app.Dicom.zframe, x, y, color, transform )
+Crosshairs() serves two purposes:
+Entry( self.frame, width=12, textvariable=self.traceSV), row=100, column=0, sticky=W ),
+Entry( self.frame, width=8, textvariable=self.displayedColour), row=13, column=1, columnspan=2, sticky=W ),
+Entry(self.framesSubframe, width=5, textvariable=self.frameSV)
+Entry(self.window, textvariable=self.regex)
+Frame( self, crosshairs ):
+Frame( self, trace ):
+Frame( traces )
+Frame() object that includes zooming and panning functionality.
+Frame(_frame or self.app.frame))
+Frame(frames_label)
+Frame(int(x)) for x in framenums]
+Frame(self)
+Frame(self, event):
+Frame(self, framenum):
+Frame(self.LEFT)#, pady=7)
+Frame(self.TOP)
+Frame(self.app.BOTTOM)
+Frame(self.app.BOTTOM)#, padx=self.label_padx)
+Frame(self.app.LEFT)#, pady=7)
+Frame(self.app.LEFT)#, pady=7, padx=7)
+Frame(self.app.RIGHT, 1.3, app)
+Frame(self.axis_frame)
+Frame(self.frame)
+Frame(self.frame_holder)
+Frame(self.tw,
+Frame(trace):
+Frame)
+Frame):
+Header(Label):
+Header(self.filesFrame, text="Choose a file:").grid( row=0, column=0, columnspan=3 )
+Header(self.frame, text="Choose a trace"), row=5, column=0, columnspan=4 ),
+Header(self.framesFrame, text="Choose a frame:")
+Label() object with a specified font
+Label(self.frame, text="TextGrid tiers:") }]
+Label(self.frame, text="Unable to load TextGrid file") }]
+Label(self.frame, text='', wraplength=550, justify=LEFT),
+Label(self.frame, text=('- '+tier+':'), wraplength=200, justify=LEFT),
+Label(self.window, text='0 results')
+Label(win,
+Listbox(lbframe, yscrollcommand=self.scrollbar.set, width=12, exportselection=False, takefocus=0)
+RectTracker(self.canvas)
+Scrollbar(lbframe)
+Scrollbar(self.window, orient='vertical')
+Spinbox(sbframe, textvariable=self.frame_shift, width=7, from_=-10000000, to=10000000)
+Spinbox(self.spinwin, textvariable=self.dyn_range, command=self.drawSpectrogram, width=7, increment=10, from_=0, to_=10000)
+Spinbox(self.spinwin, textvariable=self.spec_freq_max, command=self.drawSpectrogram, width=7, increment=100, from_=0, to_=100000)
+Spinbox(self.spinwin, textvariable=self.wl, command=self.drawSpectrogram, width=7, increment=0.0005, from_=0, to_=1)
+Toplevel(canvas.master)
+Toplevel(self.app)
+ZoomFrame(Frame):
+ZoomFrame(self.app.RIGHT, 1.3, app)

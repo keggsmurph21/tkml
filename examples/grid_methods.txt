@@ -1,0 +1,68 @@
+Binary file ./.git/objects/pack/pack-e47f85bfef26307162755a189d5f9d0d94a76874.pack matches
+Binary file ./ultratrace/__pycache__/__main__.cpython-37.pyc matches
+Binary file ./ultratrace/modules/__pycache__/base.cpython-37.pyc matches
+Binary file ./ultratrace/modules/__pycache__/control.cpython-37.pyc matches
+Binary file ./ultratrace/modules/__pycache__/dicom.cpython-37.pyc matches
+Binary file ./ultratrace/modules/__pycache__/metadata.cpython-37.pyc matches
+Binary file ./ultratrace/modules/__pycache__/playback.cpython-37.pyc matches
+Binary file ./ultratrace/modules/__pycache__/search.cpython-37.pyc matches
+Binary file ./ultratrace/modules/__pycache__/spectrogram.cpython-37.pyc matches
+Binary file ./ultratrace/modules/__pycache__/trace.cpython-37.pyc matches
+grid(
+grid(      row=0, column=0 )
+grid(    row=0, column=0, sticky=N+E+S+W)
+grid(    row=0, column=0, sticky=NW)
+grid(   row=0 )
+grid(   row=0, sticky=N )
+grid(   row=0, sticky=N+E+S+W )
+grid(  row=0, column=1)
+grid(  row=0, column=1, sticky=N+E+S+W)
+grid(  row=0, column=2 )
+grid(  row=0, column=3 )
+grid( row=0 )
+grid( row=0, column=0, columnspan=3 )
+grid( row=0, column=0, sticky=E, pady=(self.app.pady*2,self.app.pady/2) )
+grid( row=0, column=1 )
+grid( row=0, column=1, pady=(self.app.pady*2,self.app.pady/2) )
+grid( row=1 )
+grid( row=1, column=0 )
+grid( row=1, column=0, sticky=E)
+grid( row=1, column=0, sticky=N+E+S+W)
+grid( row=1, column=0, sticky=NE)
+grid( row=1, column=1 )
+grid( row=2 )
+grid( row=3 )
+grid( row=4 )
+grid( row=5 )
+grid( row=7 )
+grid()
+grid(padx=(pad[0], pad[2]),
+grid(row=0)
+grid(row=0, column=0)
+grid(row=0, column=0, sticky='news')
+grid(row=0, column=0, sticky=E)
+grid(row=0, column=0, sticky=N+S+E+W)
+grid(row=0, column=1)
+grid(row=0, column=1, sticky=E)
+grid(row=0, column=2)
+grid(row=0, columnspan=2, sticky=NE)
+grid(row=0,column=0,sticky=NE)
+grid(row=0,column=0,sticky=SE)
+grid(row=1)
+grid(row=1, column=1 )
+grid(row=1, column=2 )
+grid(row=1, columnspan=2, sticky=NE)
+grid(row=2, column=0, columnspan=3, sticky=N+S+E+W)
+grid(row=2, column=3, sticky=N+S)
+grid(row=2, columnspan=2, sticky=NE)
+grid(row=3)
+grid(row=3, column=1)
+grid(row=t, column=0, sticky=W)
+grid(row=t, column=0, sticky=W, pady=self.app.pady)
+grid(row=t, column=0, sticky=W, pady=self.app.pady/2)
+grid(row=t, column=2, sticky=S)
+grid(row=t, column=2, sticky=W, pady=self.app.pady)
+grid(row=t, column=2, sticky=W, pady=self.app.pady/2)
+grid.cpython-37.pyc matches
+grid_remove()
+grid_remove() methods to wrap corresponding
