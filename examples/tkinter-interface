@@ -1,0 +1,598 @@
+class BooleanVar(self, master=None, value=None, name=None, ) < Variable	# default = False
+
+class Button(self, master=None, cnf={}, **kw, ) < Widget
+	-activebackground        <border object: '#ececec'>              # Tcl_Obj
+	-activeforeground        <color object: '#000000'>               # Tcl_Obj
+	-anchor                  <index object: 'center'>                # Tcl_Obj
+	-background              <border object: '#d9d9d9'>              # Tcl_Obj
+	-bd # borderwidth
+	-bg # background
+	-bitmap                  ''                                      # str
+	-borderwidth             <pixel object: '1'>                     # Tcl_Obj
+	-command                 ''                                      # str
+	-compound                <index object: 'none'>                  # Tcl_Obj
+	-cursor                  ''                                      # str
+	-default                 <index object: 'disabled'>              # Tcl_Obj
+	-disabledforeground      <color object: '#a3a3a3'>               # Tcl_Obj
+	-fg # foreground
+	-font                    <font object: 'TkDefaultFont'>          # Tcl_Obj
+	-foreground              <color object: '#000000'>               # Tcl_Obj
+	-height                  0                                       # int
+	-highlightbackground     <border object: '#d9d9d9'>              # Tcl_Obj
+	-highlightcolor          <color object: '#000000'>               # Tcl_Obj
+	-highlightthickness      <pixel object: '1'>                     # Tcl_Obj
+	-image                   ''                                      # str
+	-justify                 <index object: 'center'>                # Tcl_Obj
+	-overrelief              ''                                      # str
+	-padx                    <pixel object: '3m'>                    # Tcl_Obj
+	-pady                    <pixel object: '1m'>                    # Tcl_Obj
+	-relief                  <index object: 'raised'>                # Tcl_Obj
+	-repeatdelay             0                                       # int
+	-repeatinterval          0                                       # int
+	-state                   <index object: 'normal'>                # Tcl_Obj
+	-takefocus               ''                                      # str
+	-text                    ''                                      # str
+	-textvariable            ''                                      # str
+	-underline               -1                                      # int
+	-width                   0                                       # int
+	-wraplength              <pixel object: '0'>                     # Tcl_Obj
+
+class Canvas(self, master=None, cnf={}, **kw, ) < Widget
+	-background              '#d9d9d9'                               # str
+	-bd # orderWidth
+	-bg # ackground
+	-borderwidth             '0'                                     # str
+	-closeenough             '1'                                     # str
+	-confine                 '1'                                     # str
+	-cursor                  ''                                      # str
+	-height                  '7c'                                    # str
+	-highlightbackground     '#d9d9d9'                               # str
+	-highlightcolor          '#000000'                               # str
+	-highlightthickness      '1'                                     # str
+	-insertbackground        '#000000'                               # str
+	-insertborderwidth       '0'                                     # str
+	-insertofftime           '300'                                   # str
+	-insertontime            '600'                                   # str
+	-insertwidth             '2'                                     # str
+	-offset                  '0,0'                                   # str
+	-relief                  'flat'                                  # str
+	-scrollregion            ''                                      # str
+	-selectbackground        '#c3c3c3'                               # str
+	-selectborderwidth       '1'                                     # str
+	-selectforeground        '#000000'                               # str
+	-state                   'normal'                                # str
+	-takefocus               ''                                      # str
+	-width                   '10c'                                   # str
+	-xscrollcommand          ''                                      # str
+	-xscrollincrement        '0'                                     # str
+	-yscrollcommand          ''                                      # str
+	-yscrollincrement        '0'                                     # str
+
+class Checkbutton(self, master=None, cnf={}, **kw, ) < Widget
+	-activebackground        <border object: '#ececec'>              # Tcl_Obj
+	-activeforeground        <color object: '#000000'>               # Tcl_Obj
+	-anchor                  <index object: 'center'>                # Tcl_Obj
+	-background              <border object: '#d9d9d9'>              # Tcl_Obj
+	-bd # borderwidth
+	-bg # background
+	-bitmap                  ''                                      # str
+	-borderwidth             <pixel object: '1'>                     # Tcl_Obj
+	-command                 ''                                      # str
+	-compound                <index object: 'none'>                  # Tcl_Obj
+	-cursor                  ''                                      # str
+	-disabledforeground      <color object: '#a3a3a3'>               # Tcl_Obj
+	-fg # foreground
+	-font                    <font object: 'TkDefaultFont'>          # Tcl_Obj
+	-foreground              <color object: '#000000'>               # Tcl_Obj
+	-height                  0                                       # int
+	-highlightbackground     <border object: '#d9d9d9'>              # Tcl_Obj
+	-highlightcolor          <color object: '#000000'>               # Tcl_Obj
+	-highlightthickness      <pixel object: '1'>                     # Tcl_Obj
+	-image                   ''                                      # str
+	-indicatoron             1                                       # int
+	-justify                 <index object: 'center'>                # Tcl_Obj
+	-offrelief               <index object: 'raised'>                # Tcl_Obj
+	-offvalue                '0'                                     # str
+	-onvalue                 '1'                                     # str
+	-overrelief              ''                                      # str
+	-padx                    <pixel object: '1'>                     # Tcl_Obj
+	-pady                    <pixel object: '1'>                     # Tcl_Obj
+	-relief                  <index object: 'flat'>                  # Tcl_Obj
+	-selectcolor             <border object: '#ffffff'>              # Tcl_Obj
+	-selectimage             ''                                      # str
+	-state                   <index object: 'normal'>                # Tcl_Obj
+	-takefocus               ''                                      # str
+	-text                    ''                                      # str
+	-textvariable            ''                                      # str
+	-tristateimage           ''                                      # str
+	-tristatevalue           ''                                      # str
+	-underline               -1                                      # int
+	-variable                ''                                      # str
+	-width                   0                                       # int
+	-wraplength              <pixel object: '0'>                     # Tcl_Obj
+
+class DoubleVar(self, master=None, value=None, name=None, ) < Variable	# default = 0.0
+
+class Entry(self, master=None, cnf={}, **kw, ) < Widget
+	-background              <border object: '#ffffff'>              # Tcl_Obj
+	-bd # borderwidth
+	-bg # background
+	-borderwidth             <pixel object: '1'>                     # Tcl_Obj
+	-cursor                  <cursor object: 'xterm'>                # Tcl_Obj
+	-disabledbackground      <border object: '#d9d9d9'>              # Tcl_Obj
+	-disabledforeground      <color object: '#a3a3a3'>               # Tcl_Obj
+	-exportselection         1                                       # int
+	-fg # foreground
+	-font                    <font object: 'TkTextFont'>             # Tcl_Obj
+	-foreground              <color object: '#000000'>               # Tcl_Obj
+	-highlightbackground     <color object: '#d9d9d9'>               # Tcl_Obj
+	-highlightcolor          <color object: '#000000'>               # Tcl_Obj
+	-highlightthickness      <pixel object: '1'>                     # Tcl_Obj
+	-insertbackground        <border object: '#000000'>              # Tcl_Obj
+	-insertborderwidth       <pixel object: '0'>                     # Tcl_Obj
+	-insertofftime           300                                     # int
+	-insertontime            600                                     # int
+	-insertwidth             <pixel object: '2'>                     # Tcl_Obj
+	-invalidcommand          ''                                      # str
+	-invcmd # invalidcommand
+	-justify                 <index object: 'left'>                  # Tcl_Obj
+	-readonlybackground      <border object: '#d9d9d9'>              # Tcl_Obj
+	-relief                  <index object: 'sunken'>                # Tcl_Obj
+	-selectbackground        <border object: '#c3c3c3'>              # Tcl_Obj
+	-selectborderwidth       <pixel object: '0'>                     # Tcl_Obj
+	-selectforeground        <color object: '#000000'>               # Tcl_Obj
+	-show                    ''                                      # str
+	-state                   <index object: 'normal'>                # Tcl_Obj
+	-takefocus               ''                                      # str
+	-textvariable            ''                                      # str
+	-validate                <index object: 'none'>                  # Tcl_Obj
+	-validatecommand         ''                                      # str
+	-vcmd # validatecommand
+	-width                   20                                      # int
+	-xscrollcommand          ''                                      # str
+
+class Frame(self, master=None, cnf={}, **kw, ) < Widget
+	-bd # borderwidth
+	-borderwidth             <pixel object: '0'>                     # Tcl_Obj
+	-class                   'Frame'                                 # str
+	-relief                  <index object: 'flat'>                  # Tcl_Obj
+	-background              <border object: '#d9d9d9'>              # Tcl_Obj
+	-bg # background
+	-colormap                ''                                      # str
+	-container               0                                       # int
+	-cursor                  ''                                      # str
+	-height                  <pixel object: '0'>                     # Tcl_Obj
+	-highlightbackground     <color object: '#d9d9d9'>               # Tcl_Obj
+	-highlightcolor          <color object: '#000000'>               # Tcl_Obj
+	-highlightthickness      <pixel object: '0'>                     # Tcl_Obj
+	-padx                    <pixel object: '0'>                     # Tcl_Obj
+	-pady                    <pixel object: '0'>                     # Tcl_Obj
+	-takefocus               '0'                                     # str
+	-visual                  ''                                      # str
+	-width                   <pixel object: '0'>                     # Tcl_Obj
+
+class IntVar(self, master=None, value=None, name=None, ) < Variable	# default = 0
+
+class Label(self, master=None, cnf={}, **kw, ) < Widget
+	-activebackground        <border object: '#ececec'>              # Tcl_Obj
+	-activeforeground        <color object: '#000000'>               # Tcl_Obj
+	-anchor                  <index object: 'center'>                # Tcl_Obj
+	-background              <border object: '#d9d9d9'>              # Tcl_Obj
+	-bd # borderwidth
+	-bg # background
+	-bitmap                  ''                                      # str
+	-borderwidth             <pixel object: '1'>                     # Tcl_Obj
+	-compound                <index object: 'none'>                  # Tcl_Obj
+	-cursor                  ''                                      # str
+	-disabledforeground      <color object: '#a3a3a3'>               # Tcl_Obj
+	-fg # foreground
+	-font                    <font object: 'TkDefaultFont'>          # Tcl_Obj
+	-foreground              <color object: '#000000'>               # Tcl_Obj
+	-height                  0                                       # int
+	-highlightbackground     <border object: '#d9d9d9'>              # Tcl_Obj
+	-highlightcolor          <color object: '#000000'>               # Tcl_Obj
+	-highlightthickness      <pixel object: '0'>                     # Tcl_Obj
+	-image                   ''                                      # str
+	-justify                 <index object: 'center'>                # Tcl_Obj
+	-padx                    <pixel object: '1'>                     # Tcl_Obj
+	-pady                    <pixel object: '1'>                     # Tcl_Obj
+	-relief                  <index object: 'flat'>                  # Tcl_Obj
+	-state                   <index object: 'normal'>                # Tcl_Obj
+	-takefocus               '0'                                     # str
+	-text                    ''                                      # str
+	-textvariable            ''                                      # str
+	-underline               -1                                      # int
+	-width                   0                                       # int
+	-wraplength              <pixel object: '0'>                     # Tcl_Obj
+
+class LabelFrame(self, master=None, cnf={}, **kw, ) < Widget
+	-bd # borderwidth
+	-borderwidth             <pixel object: '2'>                     # Tcl_Obj
+	-class                   'Labelframe'                            # str
+	-fg # foreground
+	-font                    <font object: 'TkDefaultFont'>          # Tcl_Obj
+	-foreground              <color object: '#000000'>               # Tcl_Obj
+	-labelanchor             <index object: 'nw'>                    # Tcl_Obj
+	-labelwidget             ''                                      # str
+	-relief                  <index object: 'groove'>                # Tcl_Obj
+	-text                    ''                                      # str
+	-background              <border object: '#d9d9d9'>              # Tcl_Obj
+	-bg # background
+	-colormap                ''                                      # str
+	-container               0                                       # int
+	-cursor                  ''                                      # str
+	-height                  <pixel object: '0'>                     # Tcl_Obj
+	-highlightbackground     <color object: '#d9d9d9'>               # Tcl_Obj
+	-highlightcolor          <color object: '#000000'>               # Tcl_Obj
+	-highlightthickness      <pixel object: '0'>                     # Tcl_Obj
+	-padx                    <pixel object: '0'>                     # Tcl_Obj
+	-pady                    <pixel object: '0'>                     # Tcl_Obj
+	-takefocus               '0'                                     # str
+	-visual                  ''                                      # str
+	-width                   <pixel object: '0'>                     # Tcl_Obj
+
+class Listbox(self, master=None, cnf={}, **kw, ) < Widget
+	-activestyle             <index object: 'dotbox'>                # Tcl_Obj
+	-background              <border object: '#ffffff'>              # Tcl_Obj
+	-bd # borderwidth
+	-bg # background
+	-borderwidth             <pixel object: '1'>                     # Tcl_Obj
+	-cursor                  ''                                      # str
+	-disabledforeground      <color object: '#a3a3a3'>               # Tcl_Obj
+	-exportselection         1                                       # int
+	-fg # foreground
+	-font                    <font object: 'TkDefaultFont'>          # Tcl_Obj
+	-foreground              <color object: '#000000'>               # Tcl_Obj
+	-height                  10                                      # int
+	-highlightbackground     <color object: '#d9d9d9'>               # Tcl_Obj
+	-highlightcolor          <color object: '#000000'>               # Tcl_Obj
+	-highlightthickness      <pixel object: '1'>                     # Tcl_Obj
+	-justify                 <index object: 'left'>                  # Tcl_Obj
+	-relief                  <index object: 'sunken'>                # Tcl_Obj
+	-selectbackground        <border object: '#c3c3c3'>              # Tcl_Obj
+	-selectborderwidth       <pixel object: '0'>                     # Tcl_Obj
+	-selectforeground        <color object: '#000000'>               # Tcl_Obj
+	-selectmode              'browse'                                # str
+	-setgrid                 0                                       # int
+	-state                   <index object: 'normal'>                # Tcl_Obj
+	-takefocus               ''                                      # str
+	-width                   20                                      # int
+	-xscrollcommand          ''                                      # str
+	-yscrollcommand          ''                                      # str
+	-listvariable            ''                                      # str
+
+class Menu(self, master=None, cnf={}, **kw, ) < Widget
+	-activebackground        <border object: '#ececec'>              # Tcl_Obj
+	-activeborderwidth       <pixel object: '1'>                     # Tcl_Obj
+	-activeforeground        <color object: '#000000'>               # Tcl_Obj
+	-background              <border object: '#d9d9d9'>              # Tcl_Obj
+	-bd # borderwidth
+	-bg # background
+	-borderwidth             <pixel object: '1'>                     # Tcl_Obj
+	-cursor                  <cursor object: 'arrow'>                # Tcl_Obj
+	-disabledforeground      <color object: '#a3a3a3'>               # Tcl_Obj
+	-fg # foreground
+	-font                    <font object: 'TkMenuFont'>             # Tcl_Obj
+	-foreground              <color object: '#000000'>               # Tcl_Obj
+	-postcommand             ''                                      # str
+	-relief                  <index object: 'raised'>                # Tcl_Obj
+	-selectcolor             <color object: '#000000'>               # Tcl_Obj
+	-takefocus               '0'                                     # str
+	-tearoff                 1                                       # int
+	-tearoffcommand          ''                                      # str
+	-title                   ''                                      # str
+	-type                    <index object: 'normal'>                # Tcl_Obj
+
+class Menubutton(self, master=None, cnf={}, **kw, ) < Widget
+	-activebackground        <border object: '#ececec'>              # Tcl_Obj
+	-activeforeground        <color object: '#000000'>               # Tcl_Obj
+	-anchor                  <index object: 'center'>                # Tcl_Obj
+	-background              <border object: '#d9d9d9'>              # Tcl_Obj
+	-bd # borderwidth
+	-bg # background
+	-bitmap                  ''                                      # str
+	-borderwidth             <pixel object: '1'>                     # Tcl_Obj
+	-cursor                  ''                                      # str
+	-direction               <index object: 'below'>                 # Tcl_Obj
+	-disabledforeground      <color object: '#a3a3a3'>               # Tcl_Obj
+	-fg # foreground
+	-font                    <font object: 'TkDefaultFont'>          # Tcl_Obj
+	-foreground              <color object: '#000000'>               # Tcl_Obj
+	-height                  '0'                                     # str
+	-highlightbackground     <color object: '#d9d9d9'>               # Tcl_Obj
+	-highlightcolor          <color object: '#000000'>               # Tcl_Obj
+	-highlightthickness      <pixel object: '0'>                     # Tcl_Obj
+	-image                   ''                                      # str
+	-indicatoron             0                                       # int
+	-justify                 <index object: 'center'>                # Tcl_Obj
+	-menu                    ''                                      # str
+	-padx                    <pixel object: '4p'>                    # Tcl_Obj
+	-pady                    <pixel object: '3p'>                    # Tcl_Obj
+	-relief                  <index object: 'flat'>                  # Tcl_Obj
+	-compound                <index object: 'none'>                  # Tcl_Obj
+	-state                   <index object: 'normal'>                # Tcl_Obj
+	-takefocus               '0'                                     # str
+	-text                    ''                                      # str
+	-textvariable            ''                                      # str
+	-underline               -1                                      # int
+	-width                   '0'                                     # str
+	-wraplength              <pixel object: '0'>                     # Tcl_Obj
+
+class Message(self, master=None, cnf={}, **kw, ) < Widget
+	-anchor                  <index object: 'center'>                # Tcl_Obj
+	-aspect                  150                                     # int
+	-background              <border object: '#d9d9d9'>              # Tcl_Obj
+	-bd # borderwidth
+	-bg # background
+	-borderwidth             <pixel object: '1'>                     # Tcl_Obj
+	-cursor                  ''                                      # str
+	-fg # foreground
+	-font                    <font object: 'TkDefaultFont'>          # Tcl_Obj
+	-foreground              <color object: '#000000'>               # Tcl_Obj
+	-highlightbackground     <color object: '#d9d9d9'>               # Tcl_Obj
+	-highlightcolor          <color object: '#000000'>               # Tcl_Obj
+	-highlightthickness      <pixel object: '0'>                     # Tcl_Obj
+	-justify                 <index object: 'left'>                  # Tcl_Obj
+	-padx                    <pixel object: '-1'>                    # Tcl_Obj
+	-pady                    <pixel object: '-1'>                    # Tcl_Obj
+	-relief                  <index object: 'flat'>                  # Tcl_Obj
+	-takefocus               '0'                                     # str
+	-text                    ''                                      # str
+	-textvariable            ''                                      # str
+	-width                   <pixel object: '0'>                     # Tcl_Obj
+
+class OptionMenu(*args, **kwargs, ) < Widget
+	-activebackground        <border object: '#ececec'>              # Tcl_Obj
+	-activeforeground        <color object: '#000000'>               # Tcl_Obj
+	-anchor                  <index object: 'center'>                # Tcl_Obj
+	-background              <border object: '#d9d9d9'>              # Tcl_Obj
+	-bd # borderwidth
+	-bg # background
+	-bitmap                  ''                                      # str
+	-borderwidth             <pixel object: '1'>                     # Tcl_Obj
+	-cursor                  ''                                      # str
+	-direction               <index object: 'below'>                 # Tcl_Obj
+	-disabledforeground      <color object: '#a3a3a3'>               # Tcl_Obj
+	-fg # foreground
+	-font                    <font object: 'TkDefaultFont'>          # Tcl_Obj
+	-foreground              <color object: '#000000'>               # Tcl_Obj
+	-height                  '0'                                     # str
+	-highlightbackground     <color object: '#d9d9d9'>               # Tcl_Obj
+	-highlightcolor          <color object: '#000000'>               # Tcl_Obj
+	-highlightthickness      <pixel object: '0'>                     # Tcl_Obj
+	-image                   ''                                      # str
+	-indicatoron             0                                       # int
+	-justify                 <index object: 'center'>                # Tcl_Obj
+	-menu                    ''                                      # str
+	-padx                    <pixel object: '4p'>                    # Tcl_Obj
+	-pady                    <pixel object: '3p'>                    # Tcl_Obj
+	-relief                  <index object: 'flat'>                  # Tcl_Obj
+	-compound                <index object: 'none'>                  # Tcl_Obj
+	-state                   <index object: 'normal'>                # Tcl_Obj
+	-takefocus               '0'                                     # str
+	-text                    ''                                      # str
+	-textvariable            ''                                      # str
+	-underline               -1                                      # int
+	-width                   '0'                                     # str
+	-wraplength              <pixel object: '0'>                     # Tcl_Obj
+
+class PanedWindow(self, master=None, cnf={}, **kw, ) < Widget
+	-background              <border object: '#d9d9d9'>              # Tcl_Obj
+	-bd # borderwidth
+	-bg # background
+	-borderwidth             <pixel object: '1'>                     # Tcl_Obj
+	-cursor                  ''                                      # str
+	-handlepad               <pixel object: '8'>                     # Tcl_Obj
+	-handlesize              <pixel object: '8'>                     # Tcl_Obj
+	-height                  ''                                      # str
+	-opaqueresize            1                                       # int
+	-orient                  <index object: 'horizontal'>            # Tcl_Obj
+	-proxybackground         ''                                      # str
+	-proxyborderwidth        <pixel object: '2'>                     # Tcl_Obj
+	-proxyrelief             ''                                      # str
+	-relief                  <index object: 'flat'>                  # Tcl_Obj
+	-sashcursor              ''                                      # str
+	-sashpad                 <pixel object: '0'>                     # Tcl_Obj
+	-sashrelief              <index object: 'flat'>                  # Tcl_Obj
+	-sashwidth               <pixel object: '3'>                     # Tcl_Obj
+	-showhandle              0                                       # int
+	-width                   ''                                      # str
+
+class Radiobutton(self, master=None, cnf={}, **kw, ) < Widget
+	-activebackground        <border object: '#ececec'>              # Tcl_Obj
+	-activeforeground        <color object: '#000000'>               # Tcl_Obj
+	-anchor                  <index object: 'center'>                # Tcl_Obj
+	-background              <border object: '#d9d9d9'>              # Tcl_Obj
+	-bd # borderwidth
+	-bg # background
+	-bitmap                  ''                                      # str
+	-borderwidth             <pixel object: '1'>                     # Tcl_Obj
+	-command                 ''                                      # str
+	-compound                <index object: 'none'>                  # Tcl_Obj
+	-cursor                  ''                                      # str
+	-disabledforeground      <color object: '#a3a3a3'>               # Tcl_Obj
+	-fg # foreground
+	-font                    <font object: 'TkDefaultFont'>          # Tcl_Obj
+	-foreground              <color object: '#000000'>               # Tcl_Obj
+	-height                  0                                       # int
+	-highlightbackground     <border object: '#d9d9d9'>              # Tcl_Obj
+	-highlightcolor          <color object: '#000000'>               # Tcl_Obj
+	-highlightthickness      <pixel object: '1'>                     # Tcl_Obj
+	-image                   ''                                      # str
+	-indicatoron             1                                       # int
+	-justify                 <index object: 'center'>                # Tcl_Obj
+	-offrelief               <index object: 'raised'>                # Tcl_Obj
+	-overrelief              ''                                      # str
+	-padx                    <pixel object: '1'>                     # Tcl_Obj
+	-pady                    <pixel object: '1'>                     # Tcl_Obj
+	-relief                  <index object: 'flat'>                  # Tcl_Obj
+	-selectcolor             <border object: '#ffffff'>              # Tcl_Obj
+	-selectimage             ''                                      # str
+	-state                   <index object: 'normal'>                # Tcl_Obj
+	-takefocus               ''                                      # str
+	-text                    ''                                      # str
+	-textvariable            ''                                      # str
+	-tristateimage           ''                                      # str
+	-tristatevalue           ''                                      # str
+	-underline               -1                                      # int
+	-value                   ''                                      # str
+	-variable                <parsedVarName object: 'selectedButton'># Tcl_Obj
+	-width                   0                                       # int
+	-wraplength              <pixel object: '0'>                     # Tcl_Obj
+
+class Scale(self, master=None, cnf={}, **kw, ) < Widget
+	-activebackground        <border object: '#ececec'>              # Tcl_Obj
+	-background              <border object: '#d9d9d9'>              # Tcl_Obj
+	-bigincrement            0                                       # int
+	-bd # borderwidth
+	-bg # background
+	-borderwidth             <pixel object: '1'>                     # Tcl_Obj
+	-command                 ''                                      # str
+	-cursor                  ''                                      # str
+	-digits                  0                                       # int
+	-fg # foreground
+	-font                    <font object: 'TkDefaultFont'>          # Tcl_Obj
+	-foreground              <color object: '#000000'>               # Tcl_Obj
+	-from                    0                                       # int
+	-highlightbackground     <border object: '#d9d9d9'>              # Tcl_Obj
+	-highlightcolor          <color object: '#000000'>               # Tcl_Obj
+	-highlightthickness      <pixel object: '1'>                     # Tcl_Obj
+	-label                   ''                                      # str
+	-length                  <pixel object: '100'>                   # Tcl_Obj
+	-orient                  <index object: 'vertical'>              # Tcl_Obj
+	-relief                  <index object: 'flat'>                  # Tcl_Obj
+	-repeatdelay             300                                     # int
+	-repeatinterval          100                                     # int
+	-resolution              1                                       # int
+	-showvalue               1                                       # int
+	-sliderlength            <pixel object: '30'>                    # Tcl_Obj
+	-sliderrelief            <index object: 'raised'>                # Tcl_Obj
+	-state                   <index object: 'normal'>                # Tcl_Obj
+	-takefocus               ''                                      # str
+	-tickinterval            0                                       # int
+	-to                      100                                     # int
+	-troughcolor             <color object: '#b3b3b3'>               # Tcl_Obj
+	-variable                ''                                      # str
+	-width                   <pixel object: '15'>                    # Tcl_Obj
+
+class Scrollbar(self, master=None, cnf={}, **kw, ) < Widget
+	-activebackground        '#ececec'                               # str
+	-activerelief            'raised'                                # str
+	-background              '#d9d9d9'                               # str
+	-bd # orderWidth
+	-bg # ackground
+	-borderwidth             '1'                                     # str
+	-command                 ''                                      # str
+	-cursor                  ''                                      # str
+	-elementborderwidth      '-1'                                    # str
+	-highlightbackground     '#d9d9d9'                               # str
+	-highlightcolor          '#000000'                               # str
+	-highlightthickness      '0'                                     # str
+	-jump                    '0'                                     # str
+	-orient                  'vertical'                              # str
+	-relief                  'sunken'                                # str
+	-repeatdelay             '300'                                   # str
+	-repeatinterval          '100'                                   # str
+	-takefocus               ''                                      # str
+	-troughcolor             '#b3b3b3'                               # str
+	-width                   '11'                                    # str
+
+class Spinbox(self, master=None, cnf={}, **kw, ) < Widget
+	-activebackground        <border object: '#ececec'>              # Tcl_Obj
+	-background              <border object: '#ffffff'>              # Tcl_Obj
+	-bd # borderwidth
+	-bg # background
+	-borderwidth             <pixel object: '1'>                     # Tcl_Obj
+	-buttonbackground        <border object: '#d9d9d9'>              # Tcl_Obj
+	-buttoncursor            ''                                      # str
+	-buttondownrelief        <index object: 'raised'>                # Tcl_Obj
+	-buttonuprelief          <index object: 'raised'>                # Tcl_Obj
+	-command                 ''                                      # str
+	-cursor                  <cursor object: 'xterm'>                # Tcl_Obj
+	-disabledbackground      <border object: '#d9d9d9'>              # Tcl_Obj
+	-disabledforeground      <color object: '#a3a3a3'>               # Tcl_Obj
+	-exportselection         1                                       # int
+	-fg # foreground
+	-font                    <font object: 'TkTextFont'>             # Tcl_Obj
+	-foreground              <color object: '#000000'>               # Tcl_Obj
+	-format                  ''                                      # str
+	-from                    0                                       # int
+	-highlightbackground     <color object: '#d9d9d9'>               # Tcl_Obj
+	-highlightcolor          <color object: '#000000'>               # Tcl_Obj
+	-highlightthickness      <pixel object: '1'>                     # Tcl_Obj
+	-increment               1                                       # int
+	-insertbackground        <border object: '#000000'>              # Tcl_Obj
+	-insertborderwidth       <pixel object: '0'>                     # Tcl_Obj
+	-insertofftime           300                                     # int
+	-insertontime            600                                     # int
+	-insertwidth             <pixel object: '2'>                     # Tcl_Obj
+	-invalidcommand          ''                                      # str
+	-invcmd # invalidcommand
+	-justify                 <index object: 'left'>                  # Tcl_Obj
+	-relief                  <index object: 'sunken'>                # Tcl_Obj
+	-readonlybackground      <border object: '#d9d9d9'>              # Tcl_Obj
+	-repeatdelay             400                                     # int
+	-repeatinterval          100                                     # int
+	-selectbackground        <border object: '#c3c3c3'>              # Tcl_Obj
+	-selectborderwidth       <pixel object: '0'>                     # Tcl_Obj
+	-selectforeground        <color object: '#000000'>               # Tcl_Obj
+	-state                   <index object: 'normal'>                # Tcl_Obj
+	-takefocus               ''                                      # str
+	-textvariable            ''                                      # str
+	-to                      0                                       # int
+	-validate                <index object: 'none'>                  # Tcl_Obj
+	-validatecommand         ''                                      # str
+	-values                  ''                                      # str
+	-vcmd # validatecommand
+	-width                   20                                      # int
+	-wrap                    0                                       # int
+	-xscrollcommand          ''                                      # str
+
+class StringVar(self, master=None, value=None, name=None, ) < Variable	# default = 
+
+class Text(self, master=None, cnf={}, **kw, ) < Widget
+	-autoseparators          '1'                                     # str
+	-background              <border object: '#ffffff'>              # Tcl_Obj
+	-bd # borderwidth
+	-bg # background
+	-blockcursor             0                                       # int
+	-borderwidth             <pixel object: '1'>                     # Tcl_Obj
+	-cursor                  <cursor object: 'xterm'>                # Tcl_Obj
+	-endline                 ''                                      # str
+	-exportselection         1                                       # int
+	-fg # foreground
+	-font                    <font object: 'TkFixedFont'>            # Tcl_Obj
+	-foreground              <color object: '#000000'>               # Tcl_Obj
+	-height                  <pixel object: '24'>                    # Tcl_Obj
+	-highlightbackground     <color object: '#d9d9d9'>               # Tcl_Obj
+	-highlightcolor          <color object: '#000000'>               # Tcl_Obj
+	-highlightthickness      <pixel object: '1'>                     # Tcl_Obj
+	-inactiveselectbackground<border object: '#c3c3c3'>              # Tcl_Obj
+	-insertbackground        <border object: '#000000'>              # Tcl_Obj
+	-insertborderwidth       <pixel object: '0'>                     # Tcl_Obj
+	-insertofftime           300                                     # int
+	-insertontime            600                                     # int
+	-insertunfocussed        <index object: 'none'>                  # Tcl_Obj
+	-insertwidth             <pixel object: '2'>                     # Tcl_Obj
+	-maxundo                 '0'                                     # str
+	-padx                    <pixel object: '1'>                     # Tcl_Obj
+	-pady                    <pixel object: '1'>                     # Tcl_Obj
+	-relief                  <index object: 'sunken'>                # Tcl_Obj
+	-selectbackground        <border object: '#c3c3c3'>              # Tcl_Obj
+	-selectborderwidth       <pixel object: '0'>                     # Tcl_Obj
+	-selectforeground        <color object: '#000000'>               # Tcl_Obj
+	-setgrid                 0                                       # int
+	-spacing1                <pixel object: '0'>                     # Tcl_Obj
+	-spacing2                <pixel object: '0'>                     # Tcl_Obj
+	-spacing3                <pixel object: '0'>                     # Tcl_Obj
+	-startline               ''                                      # str
+	-state                   <index object: 'normal'>                # Tcl_Obj
+	-tabs                    ''                                      # str
+	-tabstyle                <index object: 'tabular'>               # Tcl_Obj
+	-takefocus               ''                                      # str
+	-undo                    '0'                                     # str
+	-width                   80                                      # int
+	-wrap                    <index object: 'char'>                  # Tcl_Obj
+	-xscrollcommand          ''                                      # str
+	-yscrollcommand          ''                                      # str
+

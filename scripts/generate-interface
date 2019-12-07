@@ -1,0 +1,63 @@
+#!/usr/bin/env python
+
+import inspect
+
+import tkinter as tk
+
+def emit(*strings):
+    print(''.join(map(str, strings)), end='')
+
+def emit_class(cls, super_cls=None):
+    emit('class ', cls.__name__)
+    parameters = inspect.signature(cls.__init__).parameters.items()
+    if len(parameters):
+        emit('(')
+        for _, param in parameters:
+            emit(param, ', ')
+        emit(')')
+    if super_cls is not None:
+        emit(' < ', super_cls.__name__)
+
+def is_subclass(cls, super_cls):
+    return super_cls in cls.mro() and cls is not super_cls
+
+root = tk.Tk()
+
+for attrname in dir(tk):
+    attr = getattr(tk, attrname)
+    if type(attr) is not type:
+        continue
+
+    elif is_subclass(attr, tk.Widget):
+        Widget = attr
+
+        if Widget is tk.OptionMenu:
+            Widget = lambda root: attr(root, None, None)
+            Widget.__name__ = attr.__name__
+
+        emit_class(Widget, tk.Widget)
+
+        wi = Widget(root)
+        for name, option in wi.config().items():
+            emit('\n\t-')
+            if len(option) == 2:
+                _, alias_target = option
+                emit(f'{name} # {alias_target[1:]}')
+            else:
+                _, _, _, default_value, _ = option
+                emit(f'{name:<24}{repr(default_value):<40}', '# ', type(default_value).__name__)
+
+    elif is_subclass(attr, tk.Variable): 
+        Variable = attr
+        
+        emit_class(Variable, tk.Variable)
+
+        var = Variable(root)
+        emit('\t# default = ', var.get())
+
+    else:
+        continue
+
+    emit('\n\n')
+
+root.destroy()
